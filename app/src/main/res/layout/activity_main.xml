@@ -1,11 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".LoginActivity">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+
+    android:background="@drawable/login_background">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/avatar"
+        android:text="Hello, Admin"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="4dp"/>
+    <ImageButton
+        android:background="@drawable/rsz_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+
+        android:id="@+id/avatar"></ImageButton>
+
 
     <ListView
+        android:layout_below="@id/avatar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/listView"

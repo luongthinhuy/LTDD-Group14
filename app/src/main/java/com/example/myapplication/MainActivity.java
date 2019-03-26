@@ -1,10 +1,13 @@
 package com.example.myapplication;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.PersistableBundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -12,16 +15,23 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
+    //private ImageButton showPro;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        //showPro.findViewById(R.id.avatar);
 
         List<Book> image_details = getListBook();
         final ListView listView = (ListView) findViewById(R.id.listView);
         listView.setAdapter(new CustomListAdapter(this, image_details));
-
+//        showPro.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                startActivity(new Intent(MainActivity.this,ProfileActivity.class));
+//            }
+//        });
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 

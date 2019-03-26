@@ -8,15 +8,16 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+
 import java.util.List;
 
-public class CustomListAdapter  extends BaseAdapter {
+public class CustomListAdapter extends BaseAdapter {
 
     private List<Book> listData;
     private LayoutInflater layoutInflater;
     private Context context;
 
-    public CustomListAdapter(Context aContext,  List<Book> listData) {
+    public CustomListAdapter(Context aContext, List<Book> listData) {
         this.context = aContext;
         this.listData = listData;
         layoutInflater = LayoutInflater.from(aContext);
@@ -53,18 +54,21 @@ public class CustomListAdapter  extends BaseAdapter {
         Book book = this.listData.get(position);
         holder.bookName.setText(book.getBookName());
         holder.bookChapter.setText("Chapter " + book.getBookChapter());
+        //holder.bookImage.setImageResource(R.drawable.chuyendicuathanhxuan);
 
-        int imageId = this.getMipmapResIdByName(book.getBookImage());
+//        int imageId = this.getMipmapResIdByName(book.getBookImage());
+//
+//        holder.bookImage.setImageResource(imageId);
 
+        int imageId = getIdImageByName(book.getBookImage());
         holder.bookImage.setImageResource(imageId);
-
         return convertView;
     }
 
-    public int getMipmapResIdByName(String resName)  {
+    public int getIdImageByName(String resName)  {
         String pkgName = context.getPackageName();
 
-        int resID = context.getResources().getIdentifier(resName , "mipmap", pkgName);
+        int resID = context.getResources().getIdentifier(resName , "drawable", pkgName);
         Log.i("CustomListView", "Res Name: "+ resName+"==> Res ID = "+ resID);
         return resID;
     }
