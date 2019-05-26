@@ -45,7 +45,6 @@ public class CustomListAdapter extends BaseAdapter {
             holder = new ViewHolder();
             holder.bookImage = (ImageView) convertView.findViewById(R.id.imageView_bookImage);
             holder.bookName = (TextView) convertView.findViewById(R.id.textView_bookName);
-            holder.bookChapter = (TextView) convertView.findViewById(R.id.textView_bookChapter);
             convertView.setTag(holder);
         } else {
             holder = (ViewHolder) convertView.getTag();
@@ -53,7 +52,6 @@ public class CustomListAdapter extends BaseAdapter {
 
         Book book = this.listData.get(position);
         holder.bookName.setText(book.getBookName());
-        holder.bookChapter.setText("Chapter " + book.getBookChapter());
         //holder.bookImage.setImageResource(R.drawable.chuyendicuathanhxuan);
 
 //        int imageId = this.getMipmapResIdByName(book.getBookImage());
@@ -76,7 +74,6 @@ public class CustomListAdapter extends BaseAdapter {
     static class ViewHolder {
         ImageView bookImage;
         TextView bookName;
-        TextView bookChapter;
     }
 
 }

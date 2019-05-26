@@ -23,17 +23,17 @@
                 android:padding="16dp"
                 android:layout_marginTop="30dp"
                 android:layout_marginBottom="16dp"
-                android:src="@drawable/user"/>
+                android:src="@drawable/rsz_user"/>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:id="@+id/editText_username"
+                android:id="@+id/TextView_userName"
                 android:background="@android:color/transparent"
                 android:padding="12dp"
                 android:drawablePadding="12dp"
-                android:text="Nguyễn Quang Anh Tài"
+                android:text=""
                 android:textColor="#fff"
                 android:textAlignment="center"
                 />
@@ -47,29 +47,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:id="@+id/editText_Password"
+                android:id="@+id/TextView_email"
                 android:drawablePadding="16dp"
                 android:padding="16dp"
-                android:text="14/06/1997"
-                android:textColor="#fff"
-                android:textAlignment="center"
-                android:background="@android:color/transparent"
-                android:maxLines="1"
-                android:layout_marginTop="4dp"
-                />
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="#f9d7db" />
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
-
-                android:drawablePadding="16dp"
-                android:padding="16dp"
-                android:text="Nam"
+                android:text=""
                 android:textColor="#fff"
                 android:textAlignment="center"
                 android:background="@android:color/transparent"
@@ -88,7 +69,27 @@
 
                 android:drawablePadding="16dp"
                 android:padding="16dp"
-                android:text="0981974393"
+                android:text="Add Your Name..."
+                android:textColor="#fff"
+                android:textAlignment="center"
+                android:background="@android:color/transparent"
+                android:maxLines="1"
+                android:id="@+id/TextView_Name"
+                android:layout_marginTop="4dp"
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#f9d7db" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+
+                android:drawablePadding="16dp"
+                android:padding="16dp"
+                android:text="Add your phone..."
                 android:textColor="#fff"
                 android:textAlignment="center"
                 android:background="@android:color/transparent"

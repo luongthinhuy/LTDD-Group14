@@ -47,7 +47,7 @@
                 android:layout_height="wrap_content"
                 android:inputType="textEmailAddress"
                 android:ems="10"
-                android:id="@+id/EmailAddress"
+                android:id="@+id/Useremail"
                 android:background="@android:color/transparent"
                 android:padding="12dp"
                 android:drawablePadding="12dp"
@@ -65,7 +65,7 @@
                 android:layout_height="wrap_content"
                 android:inputType="textPassword"
                 android:ems="10"
-                android:id="@+id/editText_Password"
+                android:id="@+id/Userpassword"
                 android:drawablePadding="16dp"
                 android:padding="16dp"
                 android:hint="Password"
@@ -84,7 +84,7 @@
                 android:layout_height="wrap_content"
                 android:inputType="textPassword"
                 android:ems="10"
-                android:id="@+id/confirm_pass"
+                android:id="@+id/repass"
                 android:drawablePadding="16dp"
                 android:padding="16dp"
                 android:hint="Password Confirm"
@@ -102,6 +102,7 @@
 
 
             <Button
+                android:id="@+id/btnregister"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="#fff"

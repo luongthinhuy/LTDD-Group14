@@ -1,20 +1,46 @@
 package com.example.myapplication;
 
 public class User {
+    private int id;
     private String username;
     private String password;
-    private String image;
     private String name;
     private String phone;
+    private String email;
     private int gender;
 
-    public User(String username, String password, String image, String name, String phone, int gender) {
+    public User() {
+    }
+
+    public User(String username, String password, String name, String phone, String email, int gender) {
         this.username = username;
         this.password = password;
-        this.image = image;
         this.name = name;
         this.phone = phone;
+        this.email = email;
         this.gender = gender;
+    }
+
+    public User(String username, String password, String email) {
+        this.username = username;
+        this.password = password;
+        this.email = email;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getUsername() {
@@ -31,14 +57,6 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
-    }
-
-    public String getImage() {
-        return image;
-    }
-
-    public void setImage(String image) {
-        this.image = image;
     }
 
     public String getName() {

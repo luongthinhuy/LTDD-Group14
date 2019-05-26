@@ -1,31 +1,44 @@
 package com.example.myapplication;
 
 
-public class Book {
+import java.io.Serializable;
+
+public class Book implements Serializable {
+    private int bookID;
     private String bookName;
-    private int bookChapter;
     private String bookImage;
+    private String bookContent;
 
-    public Book(String bookName, int bookChapter, String bookImage){
+    public Book() {
+    }
+
+    public Book(int bookID, String bookName, String bookImage, String bookContent) {
+        this.bookID = bookID;
         this.bookName = bookName;
-        this.bookChapter = bookChapter;
         this.bookImage = bookImage;
+        this.bookContent = bookContent;
     }
 
-    public int getBookChapter() {
-        return bookChapter;
-    }
-
-    public String getBookImage() {
-        return bookImage;
-    }
-
-    public void setBookImage(String bookImage) {
+    public Book(String bookName, String bookImage, String bookContent) {
+        this.bookName = bookName;
         this.bookImage = bookImage;
+        this.bookContent = bookContent;
     }
 
-    public void setBookChapter(int bookChapter) {
-        this.bookChapter = bookChapter;
+    public String getBookContent() {
+        return bookContent;
+    }
+
+    public void setBookContent(String bookContent) {
+        this.bookContent = bookContent;
+    }
+
+    public int getBookID() {
+        return bookID;
+    }
+
+    public void setBookID(int bookID) {
+        this.bookID = bookID;
     }
 
     public String getBookName() {
@@ -34,6 +47,14 @@ public class Book {
 
     public void setBookName(String bookName) {
         this.bookName = bookName;
+    }
+
+    public String getBookImage() {
+        return bookImage;
+    }
+
+    public void setBookImage(String bookImage) {
+        this.bookImage = bookImage;
     }
 
     @Override

@@ -14,12 +14,14 @@ public class LoginActivity extends AppCompatActivity {
     private Button register;
     private Button login;
     private EditText userName,userPassword;
+    private Database dataHelper = new Database(this);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         setTheme(R.style.AppTheme);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        dataHelper.createAdminUser();
         userName = findViewById(R.id.editText_username);
         userPassword = findViewById(R.id.editText_Password);
         register = (Button) findViewById(R.id.register);
@@ -44,14 +46,11 @@ public class LoginActivity extends AppCompatActivity {
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (userName.getText().toString().equals("admin") && userPassword.getText().toString().equals("admin")){
+                if (dataHelper.getUserLogin(userName.getText().toString(),userPassword.getText().toString())){
                     //Toast.makeText(LoginActivity.this,"Login Success",Toast.LENGTH_LONG).show();
-                    login.setOnClickListener(new View.OnClickListener() {
-                     @Override
-                     public void onClick(View v) {
+
                         startActivity(new Intent(LoginActivity.this,MainActivity.class));
-                        }
-                     });
+
                 }else{
                     Toast.makeText(LoginActivity.this,"Username / password not correct",Toast.LENGTH_LONG).show();
 
